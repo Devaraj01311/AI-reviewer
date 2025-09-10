@@ -1,0 +1,122 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Fira Code", monospace;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+}
+
+/* Main container */
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+/* Left panel */
+main .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Code editor wrapper */
+.left .code {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Review button panel */
+.left .review {
+  margin-top: 1rem;
+  align-self: flex-end;
+  padding: 0.5rem 1.5rem;
+  background-color: #646cff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+.left .review:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+}
+
+/* Right panel */
+main .right {
+  flex: 1;
+  background-color: #2c2c3e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  overflow-y: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Markdown code blocks */
+.right pre {
+  background: #1f1f2e;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  color: #00ff88;
+  font-family: "Fira Code", monospace;
+  margin: 1rem 0;
+}
+
+/* Highlight emojis for review */
+.right p:has(❌), .right li:has(❌) {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+.right p:has(✅), .right li:has(✅) {
+  color: #4ade80;
+  font-weight: bold;
+}
+.right p:has(💡), .right li:has(💡) {
+  color: #facc15;
+  font-weight: bold;
+}
+
+/* Scrollbar styling */
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+.right::-webkit-scrollbar-thumb {
+  background-color: #646cff80;
+  border-radius: 4px;
+}
+.right::-webkit-scrollbar-track {
+  background: #1f1f2e;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .left, main .right {
+    flex-basis: auto;
+    height: 50%;
+  }
+}
