@@ -1,4 +1,4 @@
-# 🧑‍💻 AI Code Review Platform
+# AI Code Review Platform
 
 This project is a full-stack **AI-based Code Review Platform** built using **React**, **Express.js**, and **Google Generative AI**. It allows developers to submit code snippets and receive professional, senior-level code review feedback automatically.
 
@@ -137,7 +137,7 @@ ai-code-review/
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * **Frontend:** React, react-simple-code-editor, Prism.js
 * **Backend:** Node.js, Express.js
@@ -157,12 +157,4 @@ ai-code-review/
 
 ---
 
-## Contact
 
-For questions or contributions:
-✉️ [your-email@example.com](mailto:your-email@example.com)
-🔗 [GitHub Profile](https://github.com/your-username)
-
----
-
-*Replace placeholders like `your-username` and `your-email@example.com` with your actual information before publishing.*
